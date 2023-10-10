@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+
+
+---
+<style>
+    *{
+      outline:none;
+    }
+    body {
+      font-family: serif;
+     
+    }
+
+    .background-container {
+     height: 97vh; /* Use viewport height for full height */
+
+     background-attachment: fixed;
+      background-image: url('/dark30.jpg');
+      background-size: cover;
+      /* background-attachment: fixed; */
+    }
+    @media (max-width: 768px) {
+      /* Media query for mobile devices */
+      .background-container {
+        background-attachment: scroll; /* Change to normal attachment on mobile */
+      }
+    }
+    
+  </style>
+<div class="background-container flex flex-col justify-center items-center  bg-no-repeat bg-contain bg-bottom-left h-screen pt-3 pl-3 pr-3">
+  <!-- <p class="text-3xl text-stone-50">Language:</p> -->
+  
+    <div class="text-center items-center">
+      <div><Image  class="ml-12" src="/logo.png" width={150} height={150} alt="logo"></Image></div>
+      
+      <p class="text-stone-100 text-5xl font-bold pb-4">Caffe Mayer</p>
+      <a href="/coffe" class="bg-white hover:bg-gray-300 text-black font-bold py-2 px-4 rounded-2xl">OUR MENU</a>
+      
+    </div>
+  </div>
+  
+  
